@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fd38b5c-567a-476b-bcdd-8c7542215ed9" name="Changes" comment="Build : build.gradle 스프링 부트로 수정" />
+    <list default="true" id="3fd38b5c-567a-476b-bcdd-8c7542215ed9" name="Changes" comment="Feat : Application 파일 생성">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jojoldu/book/springboot/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jojoldu/book/springboot/Application.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +16,13 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -51,11 +60,20 @@
       <option name="project" value="LOCAL" />
       <updated>1727769268195</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Feat : Application 파일 생성">
+      <option name="closed" value="true" />
+      <created>1727769610673</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727769610673</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Build : build.gradle 스프링 부트로 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="Build : build.gradle 스프링 부트로 수정" />
+    <MESSAGE value="Feat : Application 파일 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat : Application 파일 생성" />
   </component>
 </project>
