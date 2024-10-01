@@ -11,6 +11,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/jojoldu/book/springboot/web/dto/HelloResponseDto.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/module-info.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/com/jojoldu/book/springboot/web/HelloControllerTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/com/jojoldu/book/springboot/web/dto/HelloResponseDtoTest.java" charset="UTF-8" />
     <file url="file://$USER_HOME$/gdg-spring-study-test/김민영/freelec-springboot2-webservice-test/src/main/java/com/jojoldu/book/springboot/Application.java" charset="UTF-8" />
   </component>
 </project>
