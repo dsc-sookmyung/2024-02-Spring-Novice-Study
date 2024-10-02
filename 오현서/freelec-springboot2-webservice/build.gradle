@@ -1,0 +1,43 @@
+buildscript {
+	ext{
+		springBootVersion = '2.6.7'
+	}
+	repositories{
+		mavenCentral()
+	}
+	dependencies{
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+
+plugins {
+	id 'org.springframework.boot' version '2.6.7'
+	id 'io.spring.dependency-management' version '1.0.12.RELEASE'
+	id 'java'
+	id 'eclipse'
+}
+
+
+group = 'com.jojoldu.book'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.projectlombok:lombok'
+	annotationProcessor ('org.projectlombok:lombok')
+}
+
+
+
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
