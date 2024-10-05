@@ -34,9 +34,12 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web' // 웹 관련 의존성 추가
 	implementation 'org.projectlombok:lombok'  // 롬복 추가
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // 스프링 부트용 Spring Data JPA 추상화 라이브러리
+	implementation 'com.h2database:h2' // 인메모리 관계형 데이터베이스
 	annotationProcessor 'org.projectlombok:lombok' // 롬복 어노테이션 프로세서
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 }
 
 test {
