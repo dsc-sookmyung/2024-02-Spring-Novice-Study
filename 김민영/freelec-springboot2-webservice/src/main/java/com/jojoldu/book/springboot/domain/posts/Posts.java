@@ -1,6 +1,7 @@
 package com.jojoldu.book.springboot.domain.posts;
 
 
+import com.jojoldu.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,8 @@ import javax.persistence.Id;
 @Getter             // 아래 2개는 lombok의 어노테이션
 @NoArgsConstructor
 @Entity   // JPA의 어노테이션
-public class Posts {
+// Posts가 BaseTimeEntity를 상속받도록 변경함.
+public class Posts extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
