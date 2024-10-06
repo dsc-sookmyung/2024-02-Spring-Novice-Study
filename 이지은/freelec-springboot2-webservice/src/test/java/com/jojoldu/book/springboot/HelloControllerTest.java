@@ -17,6 +17,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 @ExtendWith(SpringExtension.class)
+//JPA 미작동
 @WebMvcTest(controllers= HelloController.class)
 public class HelloControllerTest {
 
