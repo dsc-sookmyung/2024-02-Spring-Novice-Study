@@ -28,7 +28,7 @@ public class PostsService {
         //jpa의 영속성 컨텍스트 때문에 Update 쿼리 날리지 않음: 더티 체킹
         return id;
     }
-
+    @Transactional
     public PostsResponseDto findById(Long id){
         Posts entity=postsRepository.findById(id)
                 .orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다. id="+id));
