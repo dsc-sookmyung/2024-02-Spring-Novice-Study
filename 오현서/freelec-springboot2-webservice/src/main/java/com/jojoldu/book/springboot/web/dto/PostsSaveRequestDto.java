@@ -16,10 +16,9 @@ public class PostsSaveRequestDto {
     private String author;
     @Builder
     public PostsSaveRequestDto(String title, String content, String author){
-        this.id = toEntity().getId();
-        this.title = toEntity().getTitle();
-        this.content = toEntity().getContent();
-        this.author = toEntity().getAuthor();
+        this.title = title;
+        this.content = content;
+        this.author = author;
 
     }
 
