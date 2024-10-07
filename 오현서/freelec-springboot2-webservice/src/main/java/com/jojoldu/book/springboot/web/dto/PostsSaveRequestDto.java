@@ -9,14 +9,17 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class PostsSaveRequestDto {
+
+    private Long id;
     private String title;
     private String content;
     private String author;
     @Builder
     public PostsSaveRequestDto(String title, String content, String author){
-        this.title = title;
-        this.content = content;
-        this.author = author;
+        this.id = toEntity().getId();
+        this.title = toEntity().getTitle();
+        this.content = toEntity().getContent();
+        this.author = toEntity().getAuthor();
 
     }
 
