@@ -32,7 +32,7 @@ dependencies {
     implementation('com.h2database:h2') // 인메모리형 관계형 데이터베이스
     annotationProcessor('org.projectlombok:lombok') // 롬복 어노테이션 프로세서
     testImplementation('org.springframework.boot:spring-boot-starter-test')
-
+    runtimeOnly 'com.h2database:h2:1.4.197'
 }
 
 test {
