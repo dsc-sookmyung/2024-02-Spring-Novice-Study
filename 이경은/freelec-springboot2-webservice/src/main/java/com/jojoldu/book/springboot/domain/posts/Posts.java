@@ -4,7 +4,6 @@ import com.jojoldu.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.graalvm.nativebridge.Idempotent;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
