@@ -33,7 +33,7 @@ public class PostsService {
         return id;
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public List<PostsListResponseDto> findAllDesc() {
         return postsRepository.findAllDesc().stream().map(PostsListResponseDto::new).collect(Collectors.toList());
     }
