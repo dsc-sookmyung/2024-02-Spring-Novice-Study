@@ -39,6 +39,9 @@ dependencies {
 
 	// h2버전 다운 그레이드
 	runtimeOnly 'com.h2database:h2:1.4.197'
+
+	// mustache
+	implementation('org.springframework.boot:spring-boot-starter-mustache')
 }
 
 
