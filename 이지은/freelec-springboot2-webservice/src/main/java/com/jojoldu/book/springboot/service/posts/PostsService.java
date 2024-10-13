@@ -10,6 +10,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import org.springframework.transaction.annotation.Transactional;
+
+import java.nio.channels.OverlappingFileLockException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -39,11 +41,19 @@ public class PostsService {
         return new PostsResponseDto(entity);
     }
 
-    //조회 기능만 남겨둘 때 readonly
+    //조회 기능만 남겨둘 때 readonly(메인 화면 게시글 조회)
     @Transactional(readOnly=true)
     public List<PostsListResponseDto> findAllDesc(){
         return postsRepository.findAllDesc().stream()
                 .map(PostsListResponseDto::new)
                 .collect(Collectors.toList());
+    }
+
+    @Transactional
+    public void delete(Long id){
+        Posts posts=postsRepository.findById(id)
+                .orElseThrow(()-> new IllegalArgumentException("해당 게시글이 없습니다. id="+id));
+
+        postsRepository.delete(posts);
     }
 }
