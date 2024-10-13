@@ -43,6 +43,9 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     // h2버전 다운 그레이드
     runtimeOnly 'com.h2database:h2:1.4.197'
+
+    // mustache 의존성 추가
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
 }
 
 
