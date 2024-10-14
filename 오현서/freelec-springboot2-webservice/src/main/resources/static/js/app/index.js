@@ -25,7 +25,7 @@ var main = {
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
         }).done(function () {
-            alert('±ÛÀÌ µî·ÏµÇ¾ú½À´Ï´Ù.');
+            alert('ê¸€ì´ ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤.');
             window.location.href = '/';
         }).fail(function (error) {
             alert(JSON.stringify(error));
@@ -47,7 +47,7 @@ var main = {
                 contentType:'application/json; charset=utf-8',
                 data: JSON.stringify(data)
                 }).done(function() {
-                alert('±ÛÀÌ ¼öÁ¤µÇ¾ú½À´Ï´Ù.');
+                alert('ê¸€ì´ ìˆ˜ì •ë˜ì—ˆìŠµë‹ˆë‹¤.');
                  window.location.href = '/';
                  }).fail(function (error) {
                  alert(JSON.stringify(error));
