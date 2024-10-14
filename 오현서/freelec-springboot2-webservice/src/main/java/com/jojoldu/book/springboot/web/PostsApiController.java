@@ -8,6 +8,8 @@ import com.jojoldu.book.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.ui.Model;
+
 
 @RequiredArgsConstructor
 @RestController
@@ -32,6 +34,12 @@ public class PostsApiController {
     @GetMapping("/api/v1/posts/{id}")
     public PostsResponseDto findById (@PathVariable Long id){
         return postsService.findById(id);
+    }
+
+    @GetMapping("/")
+    public String index(Model model){
+        model.addAttribute("Posts", postsService.findAllDesc());
+        return "index";
     }
 
 }
