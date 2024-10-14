@@ -2,11 +2,14 @@ package com.jojoldu.book.springboot.web;
 
 
 import com.jojoldu.book.springboot.service.posts.PostsService;
+import com.jojoldu.book.springboot.web.dto.PostsListResponseDto;
 import com.jojoldu.book.springboot.web.dto.PostsResponseDto;
 import com.jojoldu.book.springboot.web.dto.PostsSaveRequestDto;
 import com.jojoldu.book.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -35,5 +38,11 @@ public class PostsApiController {
     public Long delete(@PathVariable Long id) {
         postsService.delete(id);
         return id;
+    }
+
+    //postman 테스트 코드 추가
+    @GetMapping("/api/v1/posts")
+    public List<PostsListResponseDto> getPostsList() {
+        return postsService.findAllDesc();
     }
 }
