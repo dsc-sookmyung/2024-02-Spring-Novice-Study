@@ -46,6 +46,14 @@ dependencies {
 
     // mustache 의존성 추가
     implementation('org.springframework.boot:spring-boot-starter-mustache')
+
+    // oauth2 관련 의존성 추가
+    // spring security
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    testImplementation('org.springframework.security:spring-security-test')
+
+    // session
+    implementation('org.springframework.session:spring-session-jdbc')
 }
 
 
