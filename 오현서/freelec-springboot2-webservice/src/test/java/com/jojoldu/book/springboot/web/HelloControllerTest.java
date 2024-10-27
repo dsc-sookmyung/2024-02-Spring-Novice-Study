@@ -8,7 +8,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.stereotype.Component;
 import org.springframework.test.web.servlet.MockMvc;
 import static org.hamcrest.Matchers.is;
 
@@ -21,9 +20,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(controllers = HelloController.class, excludeFilters = {
+@WebMvcTest(controllers = HelloController.class,
+                excludeFilters = {
         @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)
-})
+                })
 public class HelloControllerTest {
 
     @Autowired
@@ -46,9 +46,9 @@ public class HelloControllerTest {
         int amount = 1000;
 
         mvc.perform(
-                get("/hello/dto")
-                        .param("name", name)
-                        .param("amount", String.valueOf(amount)))
+                        get("/hello/dto")
+                                .param("name", name)
+                                .param("amount", String.valueOf(amount)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is(name)))
                 .andExpect(jsonPath("$.amount", is(amount)));
