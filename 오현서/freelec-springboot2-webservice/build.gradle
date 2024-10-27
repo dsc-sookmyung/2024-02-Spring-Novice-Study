@@ -37,7 +37,7 @@ dependencies {
 	implementation('com.h2database:h2')
 	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
 
-	// h2¹öÀü ´Ù¿î ±×·¹ÀÌµå
+	// h2Â¹Ã¶Ã€Ã¼ Â´Ã™Â¿Ã® Â±Ã—Â·Â¹Ã€ÃŒÂµÃ¥
 	runtimeOnly 'com.h2database:h2:1.4.197'
 
 	// mustache
