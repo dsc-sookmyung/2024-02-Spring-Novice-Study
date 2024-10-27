@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class IndexController {
 
-    //Ãß°¡
+    //ì¶”ê°€
     private final PostsService postsService;
     /*private final HttpSession httpSession;*/
 
@@ -40,7 +40,7 @@ public class IndexController {
         return "posts-save";
     }
 
-    //Ãß°¡
+    //ì¶”ê°€
     @GetMapping("/posts/update/{id}")
     public String postsUpdate(@PathVariable Long id, Model model) {
         PostsResponseDto dto = postsService.findById(id);
