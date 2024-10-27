@@ -12,6 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 //롬복 어노테이션
 @Entity
+//entity 정의
 //jpa 어노테이션
 public class Posts extends BaseTimeEntity {
 
