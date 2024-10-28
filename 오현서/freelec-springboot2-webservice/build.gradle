@@ -37,7 +37,7 @@ dependencies {
 	implementation('com.h2database:h2')
 	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
 
-	// h2¹öÀü ´Ù¿î ±×·¹ÀÌµå
+	// h2버전 다운 그레이드
 	runtimeOnly 'com.h2database:h2:1.4.197'
 
 	// mustache
@@ -47,8 +47,10 @@ dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
 	testImplementation('org.springframework.security:spring-security-test')
 
-// session
+	// session
 	implementation('org.springframework.session:spring-session-jdbc')
+
+
 }
 
 
