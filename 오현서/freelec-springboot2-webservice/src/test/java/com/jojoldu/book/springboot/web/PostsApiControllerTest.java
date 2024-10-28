@@ -118,7 +118,7 @@ public class PostsApiControllerTest {
         //                requestEntity, Long.class);
 
         mvc.perform(put(url)
-                .contentType(MediaType.APPLICATION_JSON)
+                        .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(new ObjectMapper().writeValueAsString(requestDto)))
                 .andExpect(status().isOk());
 
