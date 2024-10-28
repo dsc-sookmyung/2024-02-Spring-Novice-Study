@@ -11,7 +11,11 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-@Getter @NoArgsConstructor @Entity public class User extends BaseTimeEntity {
+
+@Getter
+@NoArgsConstructor
+@Entity
+public class User extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
 
@@ -28,7 +32,8 @@ import javax.persistence.Id;
     @Column(nullable = false)
     private Role role;
 
-    @Builder public User(String name, String email, String picture, Role role) {
+    @Builder
+    public User(String name, String email, String picture, Role role) {
         this.name = name;
         this.email = email;
         this.picture = picture;

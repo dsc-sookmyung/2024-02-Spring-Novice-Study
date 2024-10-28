@@ -2,6 +2,7 @@ package com.jojoldu.book.springboot.config.auth.dto;
 
 import com.jojoldu.book.springboot.domain.user.Role;
 import com.jojoldu.book.springboot.domain.user.User;
+
 import lombok.Builder;
 import lombok.Getter;
 

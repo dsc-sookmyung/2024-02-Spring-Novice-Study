@@ -3,6 +3,7 @@ package com.jojoldu.book.springboot.web;
 import com.jojoldu.book.springboot.config.auth.dto.SessionUser;
 import com.jojoldu.book.springboot.service.posts.PostsService;
 import com.jojoldu.book.springboot.web.dto.PostsResponseDto;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,16 +23,13 @@ public class IndexController {
     public String index(Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
         SessionUser user = (SessionUser) httpSession.getAttribute("user");
-        if (user == null) {
-            return "index";
+        if (user != null) {
+            model.addAttribute("userName", user.getName());
         }
-        model.addAttribute("userName", user.getName());
-
         return "index";
-}
+    }
 
-
-@GetMapping("/posts/save")
+    @GetMapping("/posts/save")
     public String postsSave(){
         return "posts-save";
     }
