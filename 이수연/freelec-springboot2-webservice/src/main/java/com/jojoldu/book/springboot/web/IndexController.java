@@ -16,18 +16,22 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
+    private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model, HttpSession httpSession) {
+    public String index(Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
-        SessionUser user = (SessionUser) httpSession.getAttribute("uesr");
-        if (user != null) {
-            model.addAttribute("userName", user.getName());
+        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+        if (user == null) {
+            return "index";
         }
-        return "index";
-    }
+        model.addAttribute("userName", user.getName());
 
-    @GetMapping("/posts/save")
+        return "index";
+}
+
+
+@GetMapping("/posts/save")
     public String postsSave(){
         return "posts-save";
     }

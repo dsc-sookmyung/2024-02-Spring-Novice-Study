@@ -2,9 +2,12 @@ package com.jojoldu.book.springboot.config.auth;
 
 import com.jojoldu.book.springboot.domain.user.Role;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security. config.annotation.web.
+        builders.HttpSecurity;
+import org.springframework .security.config.annotation.web.
+        configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.
+        configuration.WebSecurityConfigurerAdapter;
 
 @RequiredArgsConstructor
 @EnableWebSecurity
@@ -19,14 +22,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                     .authorizeRequests()
                     .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**").permitAll()
-                    .antMatchers("/api/v1/**").hasRole(Role.USER.name())
+                    .antMatchers("/api/v1/** ").hasRole(Role.USER.name())
                     .anyRequest().authenticated()
                 .and()
                     .logout()
-                    .logoutSuccessUrl("/")
+                        .logoutSuccessUrl("/")
                 .and()
                     .oauth2Login()
-                    .userInfoEndpoint()
-                        .userService(customOAuth2UserService);
+                        .userInfoEndpoint()
+                            .userService(customOAuth2UserService);
     }
 }
