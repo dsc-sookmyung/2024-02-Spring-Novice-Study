@@ -46,6 +46,6 @@ dependencies {
 }
 
 test {
-    // JUnit 5 플랫폼 사용
+     // JUnit 5 플랫폼 사용
     useJUnitPlatform()
 }
