@@ -1,6 +1,6 @@
 package com.jojoldu.book.springboot.web.dto;
 
-//¹öÀü ¶§¹®¿¡ ´Ù¸§
+//ë²„ì „ ë•Œë¬¸ì— ë‹¤ë¦„
 import com.jojoldu.book.springboot.domain.posts.Posts;
 
 
