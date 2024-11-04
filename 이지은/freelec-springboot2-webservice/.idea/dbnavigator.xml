@@ -42,7 +42,6 @@ select * from test;]]></console>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
       <object connection-id="f9e36f3b-0c93-46b7-b3da-57971842a7f6" object-ref="consoles/freelec2" />
-      <object connection-id="f9e36f3b-0c93-46b7-b3da-57971842a7f6" object-ref="consoles/freelec" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
