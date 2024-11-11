@@ -51,17 +51,9 @@ test {
 }
 
 jar {
-    from sourceSets.main.resources
+    enabled=false
 }
 
 bootJar {
     enabled=false
-}
-
-sourceSets {
-    main {
-        resources {
-            srcDir 'src/main/resources'
-        }
-    }
 }
