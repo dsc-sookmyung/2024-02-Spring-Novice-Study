@@ -45,14 +45,23 @@ dependencies {
     implementation("org.mariadb.jdbc:mariadb-java-client")
 }
 
+
 test {
     useJUnitPlatform()
 }
 
 jar {
-    enabled=false
+    from sourceSets.main.resources
 }
 
 bootJar {
     enabled=false
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
 }
