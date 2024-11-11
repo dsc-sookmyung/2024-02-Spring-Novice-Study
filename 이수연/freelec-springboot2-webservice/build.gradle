@@ -43,6 +43,9 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-mustache')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     annotationProcessor ('org.projectlombok:lombok')
+
+    // MariaDB 드라이버
+    implementation("org.mariadb.jdbc:mariadb-java-client")
 }
 
 jar {
