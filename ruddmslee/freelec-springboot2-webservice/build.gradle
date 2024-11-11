@@ -42,7 +42,7 @@ dependencies {
     // session
     implementation('org.springframework.session:spring-session-jdbc')
     // mariaDB
-    implementaion("org.mariadb.jdbc:mariadb-java-client")
+    implementation("org.mariadb.jdbc:mariadb-java-client")
 }
 
 test {
