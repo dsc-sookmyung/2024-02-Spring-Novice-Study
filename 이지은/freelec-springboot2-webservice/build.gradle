@@ -25,6 +25,9 @@ repositories {
     mavenCentral()
 }
 
+jar{
+    enabled=false
+}
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.projectlombok:lombok'
@@ -37,7 +40,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
     implementation 'org.springframework.session:spring-session-jdbc'
     testImplementation 'org.springframework.security:spring-security-test'
-
+    implementation 'org.mariadb.jdbc:mariadb-java-client'
 }
 
 test {
