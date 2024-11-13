@@ -29,7 +29,8 @@ repositories {
 dependencies {
     // spring security
     implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
-    testImplementation('org.springframework.security:spring-security-test')
+    testImplementation('org.sprin' +
+            'gframework.security:spring-security-test')
 
     // session
     implementation('org.springframework.session:spring-session-jdbc')
@@ -43,6 +44,13 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-mustache')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     annotationProcessor ('org.projectlombok:lombok')
+
+    // MariaDB 드라이버
+    implementation("org.mariadb.jdbc:mariadb-java-client")
+}
+
+jar {
+    enabled = false
 }
 
 test {
